@@ -1,9 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Home from './pages/Home/Home';
+import './index.scss';
+import ThemeProvider from './providers/theme.provider';
+import { Flowbite } from 'flowbite-react';
+import { theme } from './flowbite.theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <h1>Init</h1>
+    <ThemeProvider>
+      <Flowbite theme={{ theme }}>
+        <Home />
+      </Flowbite>
+    </ThemeProvider>
   </React.StrictMode>
 );
