@@ -1,7 +1,13 @@
 {
   "name": "portfolio",
+  "author": {
+    "name": "Joshua Navarro",
+    "email": "joshua.navarro.dev@gmail.com",
+    "url": "https://joshnavdev.com"
+  },
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://joshnavdev.github.io/portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -24,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +67,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "stylelint": "^15.2.0",
