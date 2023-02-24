@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
 
   return (
     <IconButtonWrapper onClick={handleClick}>
-      {theme ? (
+      {theme == 'dark' ? (
         <svg
           className="w-6 h-6"
           fill="none"
