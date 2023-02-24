@@ -130,10 +130,10 @@ const About: React.FC = () => {
             basic concepts in software development.
           </p>
           <p className="mt-4">Here are a few technologies I've been working with recently:</p>
-          <ul className="grid grid-cols-3 gap-4">
+          <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             {skills &&
               skills.map((skill) => (
-                <li key={skill.id} className="">
+                <li key={skill.id}>
                   <span className="mr-3">{skill.name}</span>
                   <SkillLevel level={skill.level} />
                 </li>

@@ -7,7 +7,7 @@ import { Flowbite } from 'flowbite-react';
 import { theme } from './flowbite.theme';
 import { GlobalStyle } from './styles';
 
-console.log(process.env.PUBLIC_URL);
+console.log('->', process.env.PUBLIC_URL);
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
