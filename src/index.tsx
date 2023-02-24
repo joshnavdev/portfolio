@@ -5,12 +5,14 @@ import './index.scss';
 import ThemeProvider from './providers/theme.provider';
 import { Flowbite } from 'flowbite-react';
 import { theme } from './flowbite.theme';
+import { GlobalStyle } from './styles';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
     <ThemeProvider>
       <Flowbite theme={{ theme }}>
+        <GlobalStyle />
         <Home />
       </Flowbite>
     </ThemeProvider>

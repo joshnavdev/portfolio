@@ -16,7 +16,6 @@ const Header: React.FC = () => {
 
   const theme = useTheme().theme;
 
-  console.log(theme);
   return (
     <Navbar fluid={true} rounded={true}>
       <Navbar.Brand href="https://joshnavdev.com/">
