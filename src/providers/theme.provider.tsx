@@ -2,10 +2,10 @@ import { ReactNode, useState } from 'react';
 import ThemeContext from '../contexts/theme.context';
 
 const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<string | null>(null);
+  const [theme, setTheme] = useState<string>('light');
 
   const toggleTheme = () => {
-    const newValue = theme === 'dark' ? null : 'dark';
+    const newValue = theme === 'dark' ? 'light' : 'dark';
 
     setTheme(newValue);
   };
