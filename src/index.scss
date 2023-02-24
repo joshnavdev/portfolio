@@ -2,3 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  p {
+    @apply mb-3; 
+    @apply leading-tight;
+    @apply font-thin;
+  }
+
+  b {
+    @apply text-nord-8;
+  }
+}

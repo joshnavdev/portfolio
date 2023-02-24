@@ -1,21 +1,23 @@
 import { Button, Navbar, useTheme } from 'flowbite-react';
+import { useEffect, useState } from 'react';
+import NavbarLink from '../NavbarLink/NavbarLink';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 type MenuType = {
   id: string;
   title: string;
+  scroll: boolean;
 };
 
 const Header: React.FC = () => {
   const menuList: MenuType[] = [
-    { id: 'about', title: 'About' },
-    { id: 'experience', title: 'Experience' },
-    { id: 'work', title: 'Work' },
-    { id: 'contact', title: 'Contact' },
+    { id: 'about', title: 'About', scroll: true },
+    { id: 'experience', title: 'Experience', scroll: true },
+    { id: 'work', title: 'Work', scroll: true },
+    { id: 'contact', title: 'Contact', scroll: true },
   ];
 
-  const theme = useTheme().theme;
-
+  // const theme = useTheme().theme;
   return (
     <Navbar fluid={true} rounded={true}>
       <Navbar.Brand href="https://joshnavdev.com/">
@@ -30,9 +32,7 @@ const Header: React.FC = () => {
       </div>
       <Navbar.Collapse className="">
         {menuList.map((menu) => (
-          <Navbar.Link key={menu.id} href={`#${menu.id}`} className="">
-            {menu.title}
-          </Navbar.Link>
+          <NavbarLink key={menu.id} title={menu.title} href={`${menu.id}`} scroll={menu.scroll} />
         ))}
       </Navbar.Collapse>
     </Navbar>
