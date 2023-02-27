@@ -21,4 +21,26 @@ export const theme = {
         'text-nord-1 bg-nord-8 border border-nord-8 dark:bg-nord-8 dark:text-nord-1 dark:border-nord-8 focus:ring-nord-8',
     },
   },
+  timeline: {
+    direction: {
+      vertical: 'relative border-l border-nord-0 dark:border-nord-6 border-opacity-30 dark:border-opacity-30',
+    },
+    item: {
+      base: {
+        vertical: 'mb-2 ml-6',
+      },
+      content: {
+        time: 'mb-0 text-sm font-normal leading-none text-gray-400 dark:text-gray-500',
+        body: 'mb-4 text-base font-normal',
+      },
+      point: {
+        marker: {
+          icon: {
+            wrapper:
+              'absolute -left-3 my-2 flex h-6 w-6 text-nord-1 items-center justify-center rounded-full bg-nord-8 ring-8 ring-nord-6 dark:bg-nord-8 dark:ring-nord-0',
+          },
+        },
+      },
+    },
+  },
 };

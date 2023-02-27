@@ -18,16 +18,10 @@ const GlobalStyle = createGlobalStyle`
       content: '';
       display: block;
       position: relative;
-      width: 500px;
+      width: 100%;
       height: 1px;
       margin-left: 20px;
       opacity: 0.3;
-      @media (max-width: 1080px) {
-        width: 300px;
-      }
-      @media (max-width: 768px) {
-        width: 100%;
-      }
       @media (max-width: 600px) {
         margin-left: 10px;
       }

@@ -1,10 +1,14 @@
 import Header from '../../componets/Header/Header';
 import About from '../../componets/sections/About/About';
+import Experience from '../../componets/sections/Experience/Experience';
 import Hero from '../../componets/sections/Hero/Hero';
 import useTheme from '../../hooks/theme.hook';
 
+import { useTheme as useFlowTheme } from 'flowbite-react';
+
 const Home = () => {
   const { theme } = useTheme();
+  console.log(useFlowTheme().theme.timeline);
 
   return (
     <div className={`${theme ?? ''} font-mplus`}>
@@ -12,7 +16,10 @@ const Home = () => {
         <Header />
         <main className="px-12 sm:px-24 md:px-32 lg:px-36 max-w-[1600px] mx-auto">
           <Hero />
-          <About />
+          <section className="py-24 space-y-52">
+            <About />
+            <Experience />
+          </section>
         </main>
       </div>
     </div>

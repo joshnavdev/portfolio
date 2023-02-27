@@ -110,7 +110,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <StyledAboutSection id="about" className="max-w-[900px] flex justify-center flex-col mx-auto pb-10">
+    <StyledAboutSection id="about" className="max-w-[900px] flex justify-center flex-col mx-auto">
       <h2 className="section-title text-2xl after:bg-nord-0 dark:after:bg-nord-6">About</h2>
       <div className="inner">
         <div>
