@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import mePhoto from '../../../images/me.jpeg';
 import SkillLevel from '../../SkillLevel/SkillLevel';
+
+const mePhoto = new URL('../../../assets/me.jpeg', import.meta.url).href;
 
 type TypeSkill = {
   id: string;
