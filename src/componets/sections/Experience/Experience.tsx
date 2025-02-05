@@ -8,6 +8,23 @@ const jobs: ITimelineItemProps[] = [
     period: 'Jun 2022 - Present',
     projects: [
       {
+        id: 'disney',
+        name: '@Disney',
+        role: 'FullStack Developer (Node JS & Java)',
+        period: 'Mar 2023 - Present',
+        responsibilities: [
+          'Joshua migrates web application on React JS with all its libraries and improves the test framework development.',
+          'Upgrades the application architecture from the server side, reconfig the way of Create React App works to improve the performance and security on Production.',
+          'Integrates the application with the new API Services.',
+          'Creates the pepiline of CI/CD with GitLab and AWS.',
+          'Manages the deployment to EKS and the creation of domains with Route 53 and AWS Certificate Manager.',
+          'Develops the authentication flow using OpenID Connect to make SSO with Dinsey private autority.',
+          'Migrate the design of a legacy web application using Spring Boot with JSP',
+          'Develops backend services with Spring Boot and Java 8.',
+          'Mentoring new developers in the team',
+        ],
+      },
+      {
         id: 'tada',
         name: '@TaDa',
         role: 'NodeJS Backend Developer',

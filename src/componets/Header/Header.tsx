@@ -1,5 +1,4 @@
-import { Button, Navbar, useTheme } from 'flowbite-react';
-import { useEffect, useState } from 'react';
+import { Button, Navbar } from 'flowbite-react';
 import NavbarLink from '../NavbarLink/NavbarLink';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
@@ -13,15 +12,14 @@ const Header: React.FC = () => {
   const menuList: MenuType[] = [
     { id: 'about', title: 'About', scroll: true },
     { id: 'experience', title: 'Experience', scroll: true },
-    { id: 'work', title: 'Work', scroll: true },
-    { id: 'contact', title: 'Contact', scroll: true },
+    // { id: 'work', title: 'Work', scroll: true },
+    // { id: 'contact', title: 'Contact', scroll: true },
   ];
 
-  // const theme = useTheme().theme;
   return (
     <Navbar fluid={true} rounded={true}>
-      <Navbar.Brand href="https://joshnavdev.com/">
-        <span className="self-center whitespace-nowrap text-xl font-semibold">JoshNavDev</span>
+      <Navbar.Brand href="https://josnav.dev/">
+        <span className="self-center whitespace-nowrap text-xl font-semibold">JosNavDev</span>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <ThemeToggle />
