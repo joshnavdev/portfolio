@@ -4,11 +4,8 @@ import Experience from '../../componets/sections/Experience/Experience';
 import Hero from '../../componets/sections/Hero/Hero';
 import useTheme from '../../hooks/theme.hook';
 
-import { useTheme as useFlowTheme } from 'flowbite-react';
-
 const Home = () => {
   const { theme } = useTheme();
-  console.log(useFlowTheme().theme.timeline);
 
   return (
     <div className={`${theme ?? ''} font-mplus`}>
