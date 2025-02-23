@@ -1,13 +1,8 @@
 import styled from 'styled-components';
 import SkillLevel from '../../SkillLevel/SkillLevel';
+import skills from './skills';
 
 const mePhoto = new URL('../../../assets/me.jpeg', import.meta.url).href;
-
-type TypeSkill = {
-  id: string;
-  name: string;
-  level: number;
-};
 
 const StyledAboutSection = styled.section`
   .inner {
@@ -35,7 +30,7 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: 4px;
-    background-color: #88c0d0;
+    background-color: var(--color-text-secondary);
 
     &:hover,
     &:focus {
@@ -75,13 +70,13 @@ const StyledPic = styled.div`
     &:before {
       top: 0;
       left: 0;
-      background-color: #88c0d0;
+      background-color: var(--color-text-secondary);
       mix-blend-mode: screen;
       z-index: 1;
     }
 
     &:after {
-      border: 2px solid #88c0d0;
+      border: 2px solid var(--color-text-secondary);
       top: 20px;
       left: 20px;
     }
@@ -89,30 +84,9 @@ const StyledPic = styled.div`
 `;
 
 const About: React.FC = () => {
-  const skills: TypeSkill[] = [
-    { id: 'nodejs', name: 'NodeJS', level: 5 },
-    { id: 'expressjs', name: 'ExpressJS', level: 5 },
-    { id: 'reactjs', name: 'ReactJS', level: 4 },
-    { id: 'graphql', name: 'GraphQL', level: 3 },
-    { id: 'nestjs', name: 'NestJS', level: 3 },
-    { id: 'docker', name: 'Docker', level: 3 },
-    { id: 'k8s', name: 'Kubernetes', level: 3 },
-    { id: 'aws', name: 'AWS', level: 3 },
-    { id: 'gcp', name: 'GCP', level: 2 },
-    { id: 'python', name: 'Python', level: 3 },
-    { id: 'golang', name: 'Golang', level: 2 },
-    { id: 'devops', name: 'DevOps', level: 3 },
-    { id: 'scrum', name: 'Scrum', level: 4 },
-    { id: 'git', name: 'Git', level: 5 },
-    { id: 'sqlnnsql', name: 'SQL & NoSQL', level: 4 },
-    { id: 'angular', name: 'Angular', level: 2 },
-    { id: 'microservices', name: 'Microservices', level: 3 },
-    { id: 'luaneovim', name: 'Lua - NeoVim', level: 3 },
-  ];
-
   return (
     <StyledAboutSection id="about" className="max-w-[900px] flex justify-center flex-col mx-auto">
-      <h2 className="section-title text-2xl after:bg-nord-0 dark:after:bg-nord-6">About</h2>
+      <h2 className="section-title text-2xl after:bg-nord-6">About</h2>
       <div className="inner">
         <div>
           <p>

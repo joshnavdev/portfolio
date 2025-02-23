@@ -3,12 +3,10 @@ interface IStarIconProps extends React.SVGAttributes<HTMLOrSVGElement> {
 }
 
 const StarIcon: React.FC<IStarIconProps> = ({ filled = false }) => {
-  const fillName = filled ? '#88c0d0' : 'none';
+  const fillName = filled ? 'fill-nord-8' : 'fill-none';
   return (
     <svg
-      className="w-5 h-5 text-nord-8"
-      fill={fillName}
-      stroke="currentColor"
+      className={`w-5 h-5 text-nord-8 ${fillName} stroke-current`}
       strokeWidth={1.5}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

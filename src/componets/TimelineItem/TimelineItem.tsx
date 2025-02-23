@@ -59,10 +59,10 @@ const TimelineItem: React.FC<ITimelineItemProps> = ({ business, period, projects
         <Timeline.Point icon={CalendarIcon} />
         <Timeline.Content>
           <div
-            className="flex justify-between items-center p-2 rounded-md cursor-pointer hover:bg-nord-5 dark:hover:bg-nord-3"
+            className="flex justify-between items-center p-2 rounded-md cursor-pointer hover:bg-nord-3"
             onClick={handleClick}>
             <Timeline.Title>{business}</Timeline.Title>
-            <Timeline.Time className="dark:text-nord-6 text-nord-3">{period}</Timeline.Time>
+            <Timeline.Time className="text-nord-6">{period}</Timeline.Time>
           </div>
           <div className={contentClasses}>
             {projects.map((project) => (

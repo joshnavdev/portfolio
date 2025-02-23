@@ -1,17 +1,24 @@
 import { ReactNode, useState } from 'react';
+import themes, { Theme } from '../componets/ThemeToggle/themes';
 import ThemeContext from '../contexts/theme.context';
 
 const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<string>('dark');
+  const currentThemeId = localStorage.getItem('current-theme');
+  let currentTheme = themes.find((t) => t.id === currentThemeId);
 
-  const toggleTheme = () => {
-    const newValue = theme === 'dark' ? 'light' : 'dark';
+  if (!currentTheme) {
+    currentTheme = themes[0];
+  }
 
-    setTheme(newValue);
+  const [theme, setTheme] = useState<Theme>(currentTheme);
+
+  const toggleTheme = (t: Theme) => {
+    localStorage.setItem('current-theme', t.id);
+    setTheme(t);
   };
 
   const value = {
-    theme: theme,
+    theme,
     toggleTheme,
   };
 

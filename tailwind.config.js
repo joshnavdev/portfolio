@@ -8,22 +8,12 @@ module.exports = {
       },
       colors: {
         nord: {
-          0: '#2E3440',
-          1: '#3B4252',
-          2: '#434C5E',
-          3: '#4C566A',
-          4: '#D8DEE9',
-          5: '#E5E9F0',
-          6: '#ECEFF4',
-          7: '#8FBCBB',
-          8: '#88C0D0',
-          9: '#81A1C1',
-          10: '#5E81AC',
-          11: '#BF616A',
-          12: '#D08770',
-          13: '#EBCB8B',
-          14: '#A3BE8C',
-          15: '#B48EAD',
+          0: 'var(--color-bg-primary)', // Background Dark
+          1: 'var(--color-text-contrast)', // Colapse should be text-primary
+          3: 'var(--color-button-hover)', // Text Primary Light - Text Subtitle Light - Button Hover
+          4: 'var(--color-text-subtitle)', // Text subtitle Dark
+          6: 'var(--color-text-primary)', // Background Light - Text Primary Dark
+          8: 'var(--color-text-secondary)', // Text Secondary Dark, Light
         },
       },
     },

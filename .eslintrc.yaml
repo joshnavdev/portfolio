@@ -23,5 +23,9 @@ parserOptions:
   ecmaVersion: 2018
   sourceType: module
   project: './tsconfig.json'
+settings:
+  jest:
+    version: latets
+
 rules:
   no-console: warn

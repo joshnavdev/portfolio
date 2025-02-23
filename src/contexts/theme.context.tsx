@@ -1,8 +1,9 @@
 import { createContext } from 'react';
+import { Theme } from '../componets/ThemeToggle/themes';
 
 interface ThemeContextType {
-  theme: string | null;
-  toggleTheme: () => void;
+  theme: Theme;
+  toggleTheme: (theme: Theme) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>(null!);
