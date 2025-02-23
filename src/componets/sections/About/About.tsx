@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import SkillLevel from '../../SkillLevel/SkillLevel';
-import skills from './skills';
+import personalInfo from '../../../data/personalInfo';
 
 const mePhoto = new URL('../../../assets/me.jpeg', import.meta.url).href;
 
@@ -89,25 +89,14 @@ const About: React.FC = () => {
       <h2 className="section-title text-2xl after:bg-nord-6">About</h2>
       <div className="inner">
         <div>
-          <p>
-            With more than four years as a software developer fullstack as a main job using technologies like{' '}
-            <b>NodeJS</b>, <b>ReactJS</b>, <b>AWS</b>, <b>Docker</b>, <b>GraphQL</b>, etc. Also, I have two years
-            developing applications as a freelancer using tools like <b>NestJS</b>, <b>Angular</b>, <b>Python</b> for
-            batch processing, <b>Kubernetes</b>, <b>TravisCI</b>, <b>AWS</b> and <b>GCP</b> at the same time with a main
-            job as <b>APIs Architect</b> at BBVA in which I was in charge of analyzing functional issues and providing
-            solutions in web services.
-          </p>
-          <p>
-            I've had the privilege of working at <b>Globant</b> as a <b>NodeJs Developer</b>, working in e-commerce
-            project like <b>Walmart</b> and <b>TaDa</b>. My main focus these days is improve my backend development
-            using new languages like <b>Go</b> and getting some AWS Certificates like{' '}
-            <b>Solution Architect Associate</b>. I'va started a project to make some videos in <b>YouTube</b> to learn
-            basic concepts in software development.
-          </p>
-          <p className="mt-4">Here are a few technologies I've been working with recently:</p>
+          {personalInfo.aboutHtml.map((paragraph) => {
+            const markup = { __html: paragraph };
+
+            return <p dangerouslySetInnerHTML={markup} />;
+          })}
           <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {skills &&
-              skills.map((skill) => (
+            {personalInfo.skills &&
+              personalInfo.skills.map((skill) => (
                 <li key={skill.id}>
                   <span className="mr-3">{skill.name}</span>
                   <SkillLevel level={skill.level} />
